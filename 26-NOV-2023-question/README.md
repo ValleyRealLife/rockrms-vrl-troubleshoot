@@ -48,7 +48,7 @@ Is there a way to use Lava in order to append a new value to `RegistrationRegist
 <br><br>
 
 # My failed attempt:
-I've been testing this using the Lava Tester plugin, since I didn't have a loaded Workflow with the `timtest` value, I'm using a `capture` in order to pretend I have it. This way I can at least continue testing as a proof of concept.
+I've been testing this using the [Lava Tester](https://www.rockrms.com/rockshop/plugin/22/lava-tester) plugin, since I didn't have a loaded Workflow with the `timtest` value, I'm using a `capture` in order to pretend I have it. This way I can at least continue testing as a proof of concept.
 ```Lava
 {% capture timtestvar %}
 {
