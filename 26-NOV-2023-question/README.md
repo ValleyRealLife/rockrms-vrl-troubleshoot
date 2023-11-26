@@ -22,6 +22,11 @@ And if `timtest` currently contains this text value:
             "WorkflowLoopIteration":0,
             "RegistrationRegistrantGuid":"036b632d-b076-47fe-8a24-2ab1eece014a",
             "RegistrationRegistrantPersonAliasGuid":"e64d220a-65fc-4da6-8490-c075c1703329"
+        },
+        {
+            "WorkflowLoopIteration":1,
+            "RegistrationRegistrantGuid":"042a892d-b087-23ab-6e13-7te3eebe023h",
+            "RegistrationRegistrantPersonAliasGuid":"a90b361h-12wf-6bp1-9072-r806b2703240"
         }
     ]
 }
@@ -41,6 +46,11 @@ Is there a way to use Lava in order to append a new value to `RegistrationRegist
             "WorkflowLoopIteration":1,
             "RegistrationRegistrantGuid":"042a892d-b087-23ab-6e13-7te3eebe023h",
             "RegistrationRegistrantPersonAliasGuid":"a90b361h-12wf-6bp1-9072-r806b2703240"
+        },
+        {
+            "WorkflowLoopIteration":2,
+            "RegistrationRegistrantGuid":"028r652a-w163-21cr-9t39-6gr4epbh901m",
+            "RegistrationRegistrantPersonAliasGuid":"i84k237j-44at-5tb2-1037-u971g1160604"
         }
     ]
 }
@@ -52,12 +62,17 @@ I've been testing this using the [Lava Tester](https://www.rockrms.com/rockshop/
 ```Lava
 {% capture timtestvar %}
 {
-    "WorkflowId": {{ Workflow.Id }},
-    "RegistrationRegistrants": [
+    "WorkflowId":29824,
+    "RegistrationRegistrants":[
         {
-            "WorkflowLoopIteration": {{ var_LoopIteration }},
-            "RegistrationRegistrantGuid": "{{ var_RegistrationRegistrantGuid }}",
-            "RegistrationRegistrantPersonAliasGuid": "{{ var_RegistrantPersonAliasGUID }}"
+            "WorkflowLoopIteration":0,
+            "RegistrationRegistrantGuid":"036b632d-b076-47fe-8a24-2ab1eece014a",
+            "RegistrationRegistrantPersonAliasGuid":"e64d220a-65fc-4da6-8490-c075c1703329"
+        },
+        {
+            "WorkflowLoopIteration":1,
+            "RegistrationRegistrantGuid":"042a892d-b087-23ab-6e13-7te3eebe023h",
+            "RegistrationRegistrantPersonAliasGuid":"a90b361h-12wf-6bp1-9072-r806b2703240"
         }
     ]
 }
