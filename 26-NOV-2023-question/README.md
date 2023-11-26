@@ -97,4 +97,4 @@ As long as the only things inside this JSON object are the `WorkflowId` and `Reg
 {{ modified_string }}{"RegistrationRegistrantGuid": "{{ var_RegistrationRegistrantGuid }}","RegistrationRegistrantPersonAliasGuid": "{{ var_RegistrantPersonAliasGUID }}"}]}
 ```
 
-Note: The last two characters of line 89 are supposed to close the square-bracket and curly-bracket that was removed with the RegExReplace in line 87.
+Note: The last two characters of the line starting with `{{ modified_string }}` are supposed to close the square-bracket and curly-bracket that was removed with the RegExReplace in the line that starts with `{% assign modified_string`.
