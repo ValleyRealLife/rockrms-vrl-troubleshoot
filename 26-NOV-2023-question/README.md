@@ -8,7 +8,7 @@ Rock v14.2
 
 # One-sentence version
 If I have a text-type Workflow Attribute containing a JSON string, and one of the values within the JSON string is an array, can I use a `Lava Run` Workflow Action in order to add a new value to that array?
-<br>
+<br><br>
 
 # A more-detailed version
 If I have a text-type Workflow Attribute with this key: `timtest`
@@ -45,7 +45,7 @@ Is there a way to use Lava in order to append a new value to `RegistrationRegist
     ]
 }
 ```
-<br>
+<br><br>
 
 # My failed attempt:
 I've been testing this using the Lava Tester plugin, since I didn't have a loaded Workflow with the `timtest` value, I'm using a `capture` in order to pretend I have it. This way I can at least continue testing as a proof of concept.
@@ -81,7 +81,7 @@ I've been testing this using the Lava Tester plugin, since I didn't have a loade
 ```
 
 Where I got stuck with this attempt is that I didn't know how to go from `updatedRegistrants` back to `timtestvar`
-<br>
+<br><br>
 
 # My ratchet solution:
 As long as the only things inside this JSON object are the `WorkflowId` and `RegistrationRegistrants`, the last two characters of `timtest` will always be `]}`, so I can use `RegExReplace` to remove `]}`, replace it with a `,`, and append the new value (as long as I bookend it with another `]}`)
