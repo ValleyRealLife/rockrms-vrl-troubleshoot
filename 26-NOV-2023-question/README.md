@@ -49,7 +49,7 @@ Is there a way to use Lava in order to append a new value to `RegistrationRegist
 
 # My failed attempt:
 I've been testing this using the [Lava Tester](https://www.rockrms.com/rockshop/plugin/22/lava-tester) plugin. Since I didn't have a loaded Workflow with the `timtest` value, I'm using a `capture` in order to pretend I have it. This way I can at least continue testing as a proof of concept.
-```Lava
+```HTML
 {% capture timtestvar %}
 {
     "WorkflowId": {{ Workflow.Id }},
@@ -85,7 +85,7 @@ Where I got stuck with this attempt is that I didn't know how to go from `update
 
 # My ratchet solution:
 As long as the only things inside this JSON object are the `WorkflowId` and `RegistrationRegistrants`, the last two characters of `timtest` will always be `]}`, so I can use `RegExReplace` to remove `]}`, replace it with a `,`, and append the new value (as long as I bookend it with another `]}`)
-```Lava
+```HTML
 {% capture timtestvar %}
 {"WorkflowId": {{ Workflow.Id }}, "RegistrationRegistrants": [{"WorkflowLoopIteration": {{ var_LoopIteration }}, "RegistrationRegistrantGuid": "{{ var_RegistrationRegistrantGuid }}", "RegistrationRegistrantPersonAliasGuid": "{{ var_RegistrantPersonAliasGUID }}"}]}
 {% endcapture %}
